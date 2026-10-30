@@ -19,5 +19,5 @@
 
   document.getElementById('intro-enter').addEventListener('click', close);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
-  setTimeout(close, 5500);
+  setTimeout(close, 4500);
 })();
