@@ -18,10 +18,10 @@ Site statique de l'association Aimons-Nous Vivants, réalisé en HTML, CSS et Ja
 La configuration préparée suppose un dépôt public nommé `anv-site` sous le compte `frfanck`, donc l'adresse `https://frfanck.github.io/anv-site/`. Si le nom du dépôt change, mettre à jour `robots.txt` et `sitemap.xml`.
 
 1. Créer le dépôt GitHub `frfanck/anv-site` et pousser la branche `main`.
-2. Dans **Settings → Pages**, choisir **GitHub Actions** comme source.
-3. Vérifier dans l'onglet **Actions** que le workflow **Deploy static site to GitHub Pages** se termine sans erreur.
+2. Dans **Settings → Pages**, choisir **Deploy from a branch**, puis `main` et le dossier `/ (root)`.
+3. Attendre la publication automatique et vérifier l'adresse du site dans cette page de réglages.
 
-Le workflow se déclenche à chaque mise à jour de `main`. Les fichiers `robots.txt` et `sitemap.xml` utilisent l'URL GitHub Pages prévue.
+GitHub Pages republie le site lors des mises à jour de `main`. Les fichiers `robots.txt` et `sitemap.xml` utilisent l'URL GitHub Pages prévue.
 
 ## Formulaires et confidentialité
 
