@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://frfanck.github.io/anv-site/sitemap.xml

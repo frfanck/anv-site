@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<title>Demande d'aide & fiches — Aimons-Nous Vivants (ANV)</title>
+<meta name="description" content="Fiches en ligne de l'association ANV : inscription, soutien alimentaire, soutien santé et soutien projet.">
+
+<link rel="icon" href="logo.jpeg">
+<link rel="apple-touch-icon" href="logo.jpeg">
+<meta name="theme-color" content="#0f2a4a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Aimons-Nous Vivants (ANV)">
+<meta property="og:title" content="Demande d'aide & fiches — Aimons-Nous Vivants (ANV)">
+<meta property="og:description" content="Fiches en ligne de l'association ANV : inscription, soutien alimentaire, soutien santé et soutien projet.">
+</head>
+<body>
+<a class="skip" href="#top">Aller au contenu</a>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand">
+      <img src="logo.jpeg" alt="Logo Association Aimons-Nous Vivants">
+      <span class="brand-name">Aimons-Nous Vivants<small>Solidarité familiale &amp; sociale</small></span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Accueil</a>
+      <a href="presentation.html">Présentation</a>
+      <a href="actions.html">Nos actions</a>
+      <a href="restaurant.html">Bar-Restaurant</a>
+      <a href="fiches.html" aria-current="page">Demande d'aide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="fiches.html" class="btn">Faire une demande</a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="top">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">Accueil</a> / Demande d'aide</p>
+      <div class="eyebrow">Fiches en ligne</div>
+      <h1>Choisissez votre demande<br>et remplissez la fiche</h1>
+      <p>Sélectionnez une option ci-dessous : inscription comme membre, aide alimentaire, aide santé ou soutien à un projet. Remplissez la fiche, puis envoyez-la : un agent ANV vous recontactera.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="choice-grid" role="tablist" aria-label="Type de demande">
+        <button type="button" class="choice" role="tab" id="tab-inscription" aria-controls="fiche-inscription" aria-selected="false" data-fiche="inscription">
+          <div class="ico" aria-hidden="true">📝</div><strong>Inscription</strong><span class="d">Devenir membre de l'association ANV.</span>
+        </button>
+        <button type="button" class="choice" role="tab" id="tab-alimentaire" aria-controls="fiche-alimentaire" aria-selected="false" data-fiche="alimentaire">
+          <div class="ico" aria-hidden="true">🍚</div><strong>Aide alimentaire</strong><span class="d">Demander un soutien en vivres.</span>
+        </button>
+        <button type="button" class="choice" role="tab" id="tab-sante" aria-controls="fiche-sante" aria-selected="false" data-fiche="sante">
+          <div class="ico" aria-hidden="true">🩺</div><strong>Aide santé</strong><span class="d">Soutien pour des soins médicaux.</span>
+        </button>
+        <button type="button" class="choice" role="tab" id="tab-projet" aria-controls="fiche-projet" aria-selected="false" data-fiche="projet">
+          <div class="ico" aria-hidden="true">🌱</div><strong>Soutien projet</strong><span class="d">Appui à une activité génératrice de revenus.</span>
+        </button>
+      </div>
+      <p class="form-note" id="fiche-hint" style="text-align:center;font-size:0.95rem;">Choisissez une option pour afficher la fiche correspondante.</p>
+
+      <article class="fiche" id="fiche-inscription" role="tabpanel" aria-labelledby="tab-inscription" hidden>
+        <div class="fiche-head">
+          <img src="logo.jpeg" alt="">
+          <div><small>Association Aimons-Nous Vivants (ANV)</small><h2>Fiche d'inscription</h2><p>Vive la vie — Vive l'association Aimons-Nous Vivants</p></div>
+        </div>
+        <form class="fiche-form" name="inscription" action="/merci" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <p class="hidden"><label>Ne pas remplir : <input name="bot-field"></label></p>
+          <input type="hidden" name="subject" value="Fiche d'inscription — nouvelle fiche reçue">
+          
+          <fieldset><legend>Identité</legend><div class="fields"><div class="full"><label for="ins-type_membre">Type de membre *</label><select id="ins-type_membre" name="type_membre" required><option value="">— Choisir —</option><option>Membre actif</option><option>Membre adhérent</option><option>Membre sympathisant</option><option>Membre d'honneur</option><option>Non membre</option></select></div><div><label for="ins-date">Date</label><input id="ins-date" name="date" type="date"></div><div><label for="ins-heure">Heure</label><input id="ins-heure" name="heure" type="time"></div><div><label for="ins-nom">Nom *</label><input id="ins-nom" name="nom" type="text" required></div><div><label for="ins-prenoms">Prénoms *</label><input id="ins-prenoms" name="prenoms" type="text" required></div><div><label for="ins-age">Âge</label><input id="ins-age" name="age" type="number"></div><div><label for="ins-lieu_provenance">Lieu de provenance</label><input id="ins-lieu_provenance" name="lieu_provenance" type="text"></div><div><label for="ins-domicile">Domicile</label><input id="ins-domicile" name="domicile" type="text"></div><div><label for="ins-contacts">Contacts (téléphone) *</label><input id="ins-contacts" name="contacts" type="tel" required></div><div><label for="ins-email">Email</label><input id="ins-email" name="email" type="email"></div><div><label for="ins-niveau_etudes">Niveau d'études</label><input id="ins-niveau_etudes" name="niveau_etudes" type="text"></div></div></fieldset><fieldset><legend>Situation</legend><div class="fields"><div class="full"><label for="ins-situation_familiale">Situation familiale</label><textarea id="ins-situation_familiale" name="situation_familiale"></textarea></div><div class="full"><label for="ins-activites">Activités</label><input id="ins-activites" name="activites" type="text"></div><div class="full"><label for="ins-souhaits">Souhaits</label><textarea id="ins-souhaits" name="souhaits"></textarea></div><div class="full"><label for="ins-personnes_a_prevenir">Personnes à prévenir / Témoins</label><textarea id="ins-personnes_a_prevenir" name="personnes_a_prevenir" placeholder="Nom et contact"></textarea></div></div></fieldset><div class="fiche-note"><strong>NB : Dispositions pratiques</strong><br>Adhérer au message de l'association Aimons-Nous Vivants et être fidèle aux cotisations : DS – CM – DPM.</div><p><label class="check"><input type="checkbox" name="adhesion" value="Oui" required> J'adhère au message de l'association Aimons-Nous Vivants et je m'engage à être fidèle aux cotisations. *</label></p>
+          <p><label class="check"><input type="checkbox" name="certification" value="Oui" required> Je certifie que les informations fournies sont exactes et j'accepte d'être contacté(e) par un agent ANV. J'ai lu la <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>. *</label></p>
+          <p style="margin-top:22px;"><button type="submit" class="btn">Envoyer la fiche</button></p>
+          <p class="fiche-foot">ANV : une expression d'amour maintenant pour sauver une vie avant qu'il ne soit trop tard</p>
+        </form>
+      </article>
+      <article class="fiche" id="fiche-alimentaire" role="tabpanel" aria-labelledby="tab-alimentaire" hidden>
+        <div class="fiche-head">
+          <img src="logo.jpeg" alt="">
+          <div><small>Association Aimons-Nous Vivants (ANV) — Togo</small><h2>Soutien alimentaire Aimons-Nous Vivants</h2><p>Nul ne peut se vanter de se passer de ses semblables.</p></div>
+        </div>
+        <form class="fiche-form" name="soutien-alimentaire" action="/demande-envoyee" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <p class="hidden"><label>Ne pas remplir : <input name="bot-field"></label></p>
+          <input type="hidden" name="subject" value="Soutien alimentaire Aimons-Nous Vivants — nouvelle fiche reçue">
+          
+          <fieldset><legend>Bénéficiaire</legend><div class="fields"><div><label for="ali-bureau_anv">Bureau ANV</label><input id="ali-bureau_anv" name="bureau_anv" type="text" placeholder="Ex. : Kara"></div><div><label for="ali-nom_prenom">Nom et prénom *</label><input id="ali-nom_prenom" name="nom_prenom" type="text" required></div><div><label for="ali-type_membre">Type de membre</label><select id="ali-type_membre" name="type_membre"><option value="">— Choisir —</option><option>Membre actif</option><option>Membre adhérent</option><option>Membre sympathisant</option><option>Membre d'honneur</option><option>Non membre</option></select></div><div><label for="ali-code_membre">Code de membre</label><input id="ali-code_membre" name="code_membre" type="text" placeholder="Si vous en avez un"></div><div><label for="ali-fonction">Fonction</label><input id="ali-fonction" name="fonction" type="text"></div><div><label for="ali-contacts">Contacts (téléphone) *</label><input id="ali-contacts" name="contacts" type="tel" required></div><div><label for="ali-email">Email</label><input id="ali-email" name="email" type="email"></div><div><label for="ali-age">Âge</label><input id="ali-age" name="age" type="number"></div><div><label for="ali-sexe">Sexe</label><select id="ali-sexe" name="sexe"><option value="">— Choisir —</option><option>Féminin</option><option>Masculin</option></select></div><div><label for="ali-provenance">Provenance</label><input id="ali-provenance" name="provenance" type="text"></div><div class="full"><label for="ali-situation_familiale">Situation familiale</label><textarea id="ali-situation_familiale" name="situation_familiale"></textarea></div></div></fieldset><fieldset><legend>Demande</legend><div class="fields"><div class="full"><label for="ali-motifs">Motifs de la demande *</label><textarea id="ali-motifs" name="motifs" required></textarea></div><div><label for="ali-date">Date</label><input id="ali-date" name="date" type="date"></div><div class="full"><label for="ali-besoins_estimes">Besoins estimés</label><input id="ali-besoins_estimes" name="besoins_estimes" type="text" placeholder="Ex. : sacs de riz, huile, nombre de personnes…"></div><div><label for="ali-temoin_1">Témoin 1</label><input id="ali-temoin_1" name="temoin_1" type="text" placeholder="Nom et contact"></div><div><label for="ali-temoin_2">Témoin 2</label><input id="ali-temoin_2" name="temoin_2" type="text" placeholder="Nom et contact"></div><div class="full"><label for="ali-personne_a_prevenir">Personne à prévenir</label><input id="ali-personne_a_prevenir" name="personne_a_prevenir" type="text" placeholder="Nom et contact"></div></div></fieldset>
+          <p><label class="check"><input type="checkbox" name="certification" value="Oui" required> Je certifie que les informations fournies sont exactes et j'accepte d'être contacté(e) par un agent ANV. J'ai lu la <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>. *</label></p>
+          <p style="margin-top:22px;"><button type="submit" class="btn">Envoyer la fiche</button></p>
+          <p class="fiche-foot">ANV : une expression d'amour maintenant pour sauver une vie avant qu'il ne soit trop tard</p>
+        </form>
+      </article>
+      <article class="fiche" id="fiche-sante" role="tabpanel" aria-labelledby="tab-sante" hidden>
+        <div class="fiche-head">
+          <img src="logo.jpeg" alt="">
+          <div><small>Association Aimons-Nous Vivants (ANV) — Togo</small><h2>Soutien santé Aimons-Nous Vivants</h2><p>Nul ne peut se vanter de se passer de ses semblables.</p></div>
+        </div>
+        <form class="fiche-form" name="soutien-sante" action="/demande-envoyee" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <p class="hidden"><label>Ne pas remplir : <input name="bot-field"></label></p>
+          <input type="hidden" name="subject" value="Soutien santé Aimons-Nous Vivants — nouvelle fiche reçue">
+          
+          <fieldset><legend>Bénéficiaire</legend><div class="fields"><div><label for="san-bureau_anv">Bureau ANV</label><input id="san-bureau_anv" name="bureau_anv" type="text" placeholder="Ex. : Kara"></div><div><label for="san-nom_prenom">Nom et prénom *</label><input id="san-nom_prenom" name="nom_prenom" type="text" required></div><div><label for="san-type_membre">Type de membre</label><select id="san-type_membre" name="type_membre"><option value="">— Choisir —</option><option>Membre actif</option><option>Membre adhérent</option><option>Membre sympathisant</option><option>Membre d'honneur</option><option>Non membre</option></select></div><div><label for="san-code_membre">Code de membre</label><input id="san-code_membre" name="code_membre" type="text" placeholder="Si vous en avez un"></div><div><label for="san-fonction">Fonction</label><input id="san-fonction" name="fonction" type="text"></div><div><label for="san-contacts">Contacts (téléphone) *</label><input id="san-contacts" name="contacts" type="tel" required></div><div><label for="san-email">Email</label><input id="san-email" name="email" type="email"></div><div><label for="san-age">Âge</label><input id="san-age" name="age" type="number"></div><div><label for="san-sexe">Sexe</label><select id="san-sexe" name="sexe"><option value="">— Choisir —</option><option>Féminin</option><option>Masculin</option></select></div><div><label for="san-provenance">Provenance</label><input id="san-provenance" name="provenance" type="text"></div><div class="full"><label for="san-centre_hospitalier">Centre hospitalier</label><input id="san-centre_hospitalier" name="centre_hospitalier" type="text"></div><div class="full"><label for="san-docteur_consulte">Docteur consulté</label><input id="san-docteur_consulte" name="docteur_consulte" type="text"></div></div></fieldset><fieldset><legend>Demande</legend><div class="fields"><div class="full"><label for="san-motifs">Motifs (maladie, soins nécessaires…) *</label><textarea id="san-motifs" name="motifs" required></textarea></div><div><label for="san-periode">Période</label><input id="san-periode" name="periode" type="text" placeholder="Ex. : depuis le…"></div><div><label for="san-depenses_totales">Dépenses totales du patient (FCFA)</label><input id="san-depenses_totales" name="depenses_totales" type="number"></div><div><label for="san-temoin_1">Témoin 1</label><input id="san-temoin_1" name="temoin_1" type="text" placeholder="Nom et contact"></div><div><label for="san-temoin_2">Témoin 2</label><input id="san-temoin_2" name="temoin_2" type="text" placeholder="Nom et contact"></div><div class="full"><label for="san-personne_a_prevenir">Personne à prévenir</label><input id="san-personne_a_prevenir" name="personne_a_prevenir" type="text" placeholder="Nom et contact"></div></div></fieldset>
+          <p><label class="check"><input type="checkbox" name="certification" value="Oui" required> Je certifie que les informations fournies sont exactes et j'accepte d'être contacté(e) par un agent ANV. J'ai lu la <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>. *</label></p>
+          <p style="margin-top:22px;"><button type="submit" class="btn">Envoyer la fiche</button></p>
+          <p class="fiche-foot">ANV : une expression d'amour maintenant pour sauver une vie avant qu'il ne soit trop tard</p>
+        </form>
+      </article>
+      <article class="fiche" id="fiche-projet" role="tabpanel" aria-labelledby="tab-projet" hidden>
+        <div class="fiche-head">
+          <img src="logo.jpeg" alt="">
+          <div><small>Association Aimons-Nous Vivants (ANV) — Togo</small><h2>Soutien projet Aimons-Nous Vivants</h2><p>Nul ne peut se vanter de se passer de ses semblables.</p></div>
+        </div>
+        <form class="fiche-form" name="soutien-projet" action="/demande-envoyee" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <p class="hidden"><label>Ne pas remplir : <input name="bot-field"></label></p>
+          <input type="hidden" name="subject" value="Soutien projet Aimons-Nous Vivants — nouvelle fiche reçue">
+          
+          <fieldset><legend>Bénéficiaire</legend><div class="fields"><div><label for="pro-bureau_anv">Bureau ANV</label><input id="pro-bureau_anv" name="bureau_anv" type="text" placeholder="Ex. : Kara"></div><div><label for="pro-nom_prenom">Nom et prénom *</label><input id="pro-nom_prenom" name="nom_prenom" type="text" required></div><div><label for="pro-type_membre">Type de membre</label><select id="pro-type_membre" name="type_membre"><option value="">— Choisir —</option><option>Membre actif</option><option>Membre adhérent</option><option>Membre sympathisant</option><option>Membre d'honneur</option><option>Non membre</option></select></div><div><label for="pro-code_membre">Code de membre</label><input id="pro-code_membre" name="code_membre" type="text" placeholder="Si vous en avez un"></div><div><label for="pro-fonction">Fonction</label><input id="pro-fonction" name="fonction" type="text"></div><div><label for="pro-contacts">Contacts (téléphone) *</label><input id="pro-contacts" name="contacts" type="tel" required></div><div><label for="pro-email">Email</label><input id="pro-email" name="email" type="email"></div><div><label for="pro-age">Âge</label><input id="pro-age" name="age" type="number"></div><div><label for="pro-sexe">Sexe</label><select id="pro-sexe" name="sexe"><option value="">— Choisir —</option><option>Féminin</option><option>Masculin</option></select></div><div><label for="pro-provenance">Provenance</label><input id="pro-provenance" name="provenance" type="text"></div><div class="full"><label for="pro-projet">Projet *</label><input id="pro-projet" name="projet" type="text" required></div><div class="full"><label for="pro-lieu_realisation">Lieu de réalisation</label><input id="pro-lieu_realisation" name="lieu_realisation" type="text"></div></div></fieldset><fieldset><legend>Demande</legend><div class="fields"><div class="full"><label for="pro-motifs">Motifs *</label><textarea id="pro-motifs" name="motifs" required></textarea></div><div><label for="pro-periode">Période</label><input id="pro-periode" name="periode" type="text"></div><div><label for="pro-participation_personnelle">Participation personnelle</label><input id="pro-participation_personnelle" name="participation_personnelle" type="text" placeholder="Apport en argent, matériel…"></div><div class="full"><label for="pro-pertinence_projet">Pertinence du projet</label><textarea id="pro-pertinence_projet" name="pertinence_projet"></textarea></div><div><label for="pro-temoin_1">Témoin 1</label><input id="pro-temoin_1" name="temoin_1" type="text" placeholder="Nom et contact"></div><div><label for="pro-temoin_2">Témoin 2</label><input id="pro-temoin_2" name="temoin_2" type="text" placeholder="Nom et contact"></div><div class="full"><label for="pro-personne_a_prevenir">Personne à prévenir</label><input id="pro-personne_a_prevenir" name="personne_a_prevenir" type="text" placeholder="Nom et contact"></div></div></fieldset>
+          <p><label class="check"><input type="checkbox" name="certification" value="Oui" required> Je certifie que les informations fournies sont exactes et j'accepte d'être contacté(e) par un agent ANV. J'ai lu la <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>. *</label></p>
+          <p style="margin-top:22px;"><button type="submit" class="btn">Envoyer la fiche</button></p>
+          <p class="fiche-foot">ANV : une expression d'amour maintenant pour sauver une vie avant qu'il ne soit trop tard</p>
+        </form>
+      </article>
+    </div>
+  </section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.jpeg" alt="Logo ANV">
+        <strong>Aimons-Nous Vivants</strong>
+      </div>
+      <nav>
+      <a href="index.html">Accueil</a>
+      <a href="presentation.html">Présentation</a>
+      <a href="actions.html">Nos actions</a>
+      <a href="restaurant.html">Bar-Restaurant</a>
+      <a href="fiches.html">Demande d'aide</a>
+      <a href="contact.html">Contact</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      </nav>
+      <div class="footer-social" hidden>
+        <span class="footer-social-label">Suivez-nous</span>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.5 2 12 2S2 6.5 2 12.06c0 5 3.66 9.13 8.44 9.94v-7.03H7.9v-2.91h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.81 8.44-4.94 8.44-9.94Z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.11-3.72 2.58-4.96 1.66-1.42 3.94-2.11 6.1-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07Z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a2.9 2.9 0 0 0-2-2C19.7 3.7 12 3.7 12 3.7s-7.7 0-9.5.5a2.9 2.9 0 0 0-2 2A30.4 30.4 0 0 0 0 12a30.4 30.4 0 0 0 .5 5.8 2.9 2.9 0 0 0 2 2c1.8.5 9.5.5 9.5.5s7.7 0 9.5-.5a2.9 2.9 0 0 0 2-2A30.4 30.4 0 0 0 24 12a30.4 30.4 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.9 12Z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.7 0 3.05.01 4.12.06 1.06.05 1.79.22 2.43.46.66.26 1.21.6 1.75 1.14.55.55.9 1.1 1.15 1.76.24.64.4 1.37.46 2.43C21.96 8.95 22 9.3 22 12s-.01 3.05-.07 4.12c-.05 1.06-.22 1.79-.46 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.24-1.37.4-2.43.46-1.06.06-1.4.06-4.12.06s-3.05-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.46a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.24-.64-.4-1.37-.46-2.43C2.01 15.05 2 14.7 2 12s.01-3.05.06-4.12c.06-1.06.22-1.79.47-2.43a4.9 4.9 0 0 1 1.15-1.76A4.9 4.9 0 0 1 5.44 2.54c.64-.25 1.37-.41 2.43-.47C8.95 2.01 9.3 2 12 2Zm0 1.8c-2.67 0-2.99.01-4.04.06-.86.04-1.33.18-1.64.3-.41.16-.7.35-1.01.66-.31.31-.5.6-.66 1.01-.12.31-.26.78-.3 1.64C4.31 9.01 4.3 9.33 4.3 12s.01 2.99.06 4.04c.04.86.18 1.33.3 1.64.16.41.35.7.66 1.01.31.31.6.5 1.01.66.31.12.78.26 1.64.3 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.86-.04 1.33-.18 1.64-.3.41-.16.7-.35 1.01-.66.31-.31.5-.6.66-1.01.12-.31.26-.78.3-1.64.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.86-.18-1.33-.3-1.64a2.7 2.7 0 0 0-.66-1.01 2.7 2.7 0 0 0-1.01-.66c-.31-.12-.78-.26-1.64-.3C14.99 3.81 14.67 3.8 12 3.8Zm0 3.07a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26Zm0 1.8a3.33 3.33 0 1 0 0 6.66 3.33 3.33 0 0 0 0-6.66Zm5.34-3.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Association Aimons-Nous Vivants (ANV). Tous droits réservés.</span>
+      <span>Solidarité familiale — Solidarité sociale</span>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script src="fiches.js"></script>
+</body>
+</html>
